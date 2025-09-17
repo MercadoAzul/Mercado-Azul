@@ -8,21 +8,24 @@
 
 body {
   background-color: #275364;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .interface {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 4%;
 }
 
-/* ESTILO DO CABEÇALHO */
+/* CABEÇALHO */
 header {
-  padding: 40px 4%;
+  padding: 20px 4%;
+  background: #1e4250;
 }
 
 header > .interface {
@@ -32,54 +35,55 @@ header > .interface {
 }
 
 header a {
-  color: #464646;
+  color: #d9d9d9;
   text-decoration: none;
-  display: inline-block;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 header a:hover {
   color: white; 
-  transform: scale(1.1);
-  transition: 0.2s;
 }
 
 header nav ul {
-  list-style-type: none;
+  list-style: none;
 }
 
 header nav ul li {
   display: inline-block;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 header .btn-contato button {
-  padding: 10px 40px;
-  font-size: 18px;
+  padding: 10px 30px;
+  font-size: 16px;
   font-weight: 600; 
   background-color: #96c9d9;
-  border: 0;
+  border: none;
   border-radius: 30px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 header .btn-contato button:hover {
   box-shadow: 0 0 8px #96c9d9;
 }
 
-/* ESTILO DO TOPO DO SITE */
+/* TOPO DO SITE */
 section.topo-do-site {
-  padding: 40px 4%;
+  padding: 60px 4%;
 }
 
 section.topo-do-site .flex {
   align-items: center; 
-  justify-content: center;
+  justify-content: space-between;
   gap: 40px;
 }
 
 .txt-topo-site h1 {
-  font-size: 42px;
+  font-size: 3rem;
   color: white;
+  line-height: 1.2;
 }
 
 .txt-topo-site h1 span {
@@ -90,26 +94,74 @@ section.topo-do-site .flex {
   color: white;
   margin: 20px 0;
   max-width: 500px;
+  font-size: 1.1rem;
 }
 
+.txt-topo-site .btn-contato button {
+  padding: 12px 32px;
+  font-size: 16px;
+}
+
+/* IMAGEM DO TOPO */
 .img-top-site img {
   max-width: 400px;
   width: 100%;
   border-radius: 10px;
 }
 
-/* RESPONSIVIDADE */
-@media screen and (max-width: 800px) {
-  .menu-desktop, .btn-contato {
-    display: none;
-  }
-  
-  .flex {
-    flex-direction: column;
+/* 📱 RESPONSIVIDADE */
+@media screen and (max-width: 1024px) {
+  section.topo-do-site .flex {
+    flex-direction: column-reverse;
     text-align: center;
+  }
+
+  .txt-topo-site h1 {
+    font-size: 2.5rem;
+  }
+
+  .img-top-site img {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav ul li {
+    padding: 0 10px;
+  }
+
+  .txt-topo-site h1 {
+    font-size: 2rem;
+  }
+
+  .txt-topo-site p {
+    font-size: 1rem;
   }
 
   .img-top-site img {
     max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header > .interface {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .txt-topo-site h1 {
+    font-size: 1.8rem;
+  }
+
+  .txt-topo-site p {
+    font-size: 0.95rem;
+  }
+
+  .img-top-site img {
+    max-width: 200px;
   }
 }
