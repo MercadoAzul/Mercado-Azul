@@ -1,10 +1,9 @@
-
-/* ESTILO GERAL*/
+/* ESTILO GERAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', Sans-Serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -17,7 +16,7 @@ body {
 }
 
 .interface {
-  max-width: 128;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -40,7 +39,8 @@ header a {
 
 header a:hover {
   color: white; 
-  transform: scale(1,10);
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 header nav ul {
@@ -63,7 +63,7 @@ header .btn-contato button {
 }
 
 header .btn-contato button:hover {
-  box-shadow: 0, 0, 8px; #96c9d9;
+  box-shadow: 0 0 8px #96c9d9;
 }
 
 /* ESTILO DO TOPO DO SITE */
@@ -74,21 +74,31 @@ section.topo-do-site {
 section.topo-do-site .flex {
   align-items: center; 
   justify-content: center;
+  gap: 40px;
 }
 
+.txt-topo-site h1 {
+  font-size: 42px;
+  color: white;
+}
 
+.txt-topo-site h1 span {
+  color: #96c9d9;
+}
 
+.txt-topo-site p {
+  color: white;
+  margin: 20px 0;
+  max-width: 500px;
+}
 
+.img-top-site img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
 
-
-
-
-
-
-
-
-
-.
+/* RESPONSIVIDADE */
 @media screen and (max-width: 800px) {
   .menu-desktop, .btn-contato {
     display: none;
@@ -96,6 +106,10 @@ section.topo-do-site .flex {
   
   .flex {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .img-top-site img {
+    max-width: 250px;
   }
 }
-
