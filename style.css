@@ -89,7 +89,7 @@ section.topo-do-site .flex {
 
 
 .
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1000px) {
   .menu-desktop, .btn-contato {
     display: none;
   }
