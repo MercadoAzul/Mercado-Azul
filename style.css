@@ -8,8 +8,12 @@
 }
 
 body {
-  background-color: black;
+  background-color: #275364;
   height: 100vh;
+}
+
+flex {
+  display: flex;
 }
 
 .interface {
@@ -36,7 +40,7 @@ header a {
 
 header a:hover {
   color: white; 
-  transform: scale(0,15);
+  transform: scale(1,10);
 }
 
 header nav ul {
@@ -61,3 +65,37 @@ header .btn-contato button {
 header .btn-contato button:hover {
   box-shadow: 0, 0, 8px; #96c9d9;
 }
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+  padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+  align-items: center; 
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+@media screen and (max-width: 1020px) {
+  .menu-desktop, .btn-contato {
+    display: none;
+  }
+  
+  .flex {
+    flex-direction: column;
+  }
+}
+
