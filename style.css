@@ -16,6 +16,12 @@ body {
   flex-wrap: wrap;
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* espaçamento entre texto e imagem */
+}
+
 .interface {
   max-width: 1200px;
   margin: 0 auto;
