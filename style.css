@@ -1,173 +1,132 @@
-/* ESTILO GERAL */
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: #9ac5ca;
+  text-align: center;
+  padding: 15px;
+}
+
+header h1 {
+  color: white;
+}
+
+header span {
+  color: cyan;
 }
 
 body {
-  background-color: #275364;
-  min-height: 100vh;
+  background-color: #4a6c74;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
+body h1 {
+  color: white;
+  font-size: 50px;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px; /* espaçamento entre texto e imagem */
+body p {
+  color: white;
 }
 
-.interface {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 4%;
-}
-
-/* CABEÇALHO */
-header {
-  padding: 20px 4%;
-  background: #1e4250;
-}
-
-header > .interface {
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; 
-}
-
-header a {
-  color: #d9d9d9;
+.botao01 {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: #92bdc6;
+  color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+  padding: 14px 25px; 
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-header a:hover {
-  color: white; 
+.botao01:hover {
+  background: #487680;
 }
 
-header nav ul {
-  list-style: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  padding: 0 20px;
-}
-
-header .btn-contato button {
-  padding: 10px 30px;
-  font-size: 16px;
-  font-weight: 600; 
-  background-color: #96c9d9;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-header .btn-contato button:hover {
-  box-shadow: 0 0 8px #96c9d9;
-}
-
-/* TOPO DO SITE */
-section.topo-do-site {
-  padding: 60px 4%;
-}
-
-section.topo-do-site .flex {
-  align-items: center; 
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.txt-topo-site h1 {
-  font-size: 3rem;
+.botao02 { 
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  margin: 15px;
+  background: #66e1a9;
   color: white;
-  line-height: 1.2;
+  text-decoration: none;
+  padding: 14px 25px; 
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-.txt-topo-site h1 span {
-  color: #96c9d9;
+.botao02:hover {
+  background-color: #378461;
+  transition: 0,55s;
 }
 
-.txt-topo-site p {
+.botao02:active {
+  box-shadow: inset 0 4px 6px rgba(0,0,0,0.4); 
+  transform: translateY(2px); 
+}
+
+main {
+  margin: 0;
+  padding: 15px;
+}
+
+main span {
+  color: #a1e39e;
+}
+
+.meio-do-site {
+  margin: 0;
+  padding: 15px;
+  background: #9ac5ca;
   color: white;
-  margin: 20px 0;
-  max-width: 500px;
-  font-size: 1.1rem;
 }
 
-.txt-topo-site .btn-contato button {
-  padding: 12px 32px;
-  font-size: 16px;
+.meio-do-site h2 {
+  text-align: center;
 }
 
-/* IMAGEM DO TOPO */
-.img-top-site img {
-  max-width: 400px;
-  width: 100%;
+.texto-meio-site {
+  margin: 0; 
+  padding: 15px;
+}
+
+/* card */
+.card {
+  display: flex;
+  align-items: flex-start;
+  background: #9ac5ca;
   border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 12px;
+  width: 100%;
+  max-width: 95%;
+  margin: 10px auto;
+  gap: 10px;
 }
 
-/* 📱 RESPONSIVIDADE */
-@media screen and (max-width: 1024px) {
-  section.topo-do-site .flex {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .txt-topo-site h1 {
-    font-size: 2.5rem;
-  }
-
-  .img-top-site img {
-    max-width: 300px;
-  }
+.card img {
+  width: 110px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-  header nav ul li {
-    padding: 0 10px;
-  }
-
-  .txt-topo-site h1 {
-    font-size: 2rem;
-  }
-
-  .txt-topo-site p {
-    font-size: 1rem;
-  }
-
-  .img-top-site img {
-    max-width: 250px;
-  }
+.card-content {
+  flex: 1;
 }
 
-@media screen and (max-width: 480px) {
-  header > .interface {
-    flex-direction: column;
-    gap: 15px;
-  }
+.card-content h2 {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+}
 
-  .menu-desktop {
-    display: none;
-  }
-
-  .txt-topo-site h1 {
-    font-size: 1.8rem;
-  }
-
-  .txt-topo-site p {
-    font-size: 0.95rem;
-  }
-
-  .img-top-site img {
-    max-width: 200px;
-  }
+.card-content p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: white;
+  line-height: 1.3;
 }
