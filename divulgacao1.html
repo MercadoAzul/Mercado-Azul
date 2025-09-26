@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divulgação - Produto</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f7f9fc;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+h1 {
+    color: #0077cc;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.galeria img {
+    width: calc(33% - 10px);
+    border-radius: 8px;
+    object-fit: cover;
+}
+.botao-contato, .botao-voltar {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0077cc;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+.botao-contato:hover, .botao-voltar:hover {
+    background-color: #005fa3;
+}
+@media(max-width: 768px){
+    .galeria img { width: calc(50% - 10px); }
+}
+@media(max-width: 480px){
+    .galeria img { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Título do Produto/Divulgação</h1>
+    <p>Descrição detalhada do produto ou serviço. Aqui você pode colocar todas as informações importantes que quer passar para quem está visualizando a divulgação.</p>
+
+    <div class="galeria">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem 1">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem 2">
+        <img src="https://via.placeholder.com/300x200" alt="Imagem 3">
+    </div>
+
+    <a href="https://wa.me/5511999999999" class="botao-contato" target="_blank">Entrar em Contato</a>
+    <a href="home.html" class="botao-voltar">Voltar</a>
+</div>
+
+</body>
+</html>

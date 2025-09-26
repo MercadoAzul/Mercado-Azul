@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <title>Mazul | Início</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🌐 Mazul</div>
+    <button class="menu-btn" id="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Overlay menu -->
+  <div class="menu-overlay" id="menu">
+    <ul>
+      <li><a href="home.html">Início</a></li>
+      <li><a href="#">Categorias</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <!-- Barra de pesquisa -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Pesquisar...">
+      <button onclick="searchCards()">🔍</button>
+    </div>
+
+    <!-- Bolhas: só o círculo clicável -->
+    <div class="shortcuts">
+      <div class="shortcut">
+        <a href="promocoes.html"><div class="circle">🔥</div></a>
+        <p>Promoções</p>
+      </div>
+      <div class="shortcut">
+        <a href="produtos.html"><div class="circle">🛍️</div></a>
+        <p>Produtos</p>
+      </div>
+      <div class="shortcut">
+        <a href="apps.html"><div class="circle">📱</div></a>
+        <p>Apps</p>
+      </div>
+      <div class="shortcut">
+        <a href="servicos.html"><div class="circle">💼</div></a>
+        <p>Serviços</p>
+      </div>
+      <div class="shortcut">
+        <a href="destaques.html"><div class="circle">⭐</div></a>
+        <p>Destaques</p>
+      </div>
+    </div>
+
+    <!-- Cards com fundo diferenciado -->
+    <div class="cards-section">
+      <div class="grid" id="productGrid">
+        <!-- CARD DE PRODUTO -->
+        <div class="card">
+          <img src="assets/imagens/produto1.png" alt="produto1">
+          <h2>Seu produto aqui!</h2>
+          <p>Uma breve descrição do produto ou serviço oferecido.</p>
+          <div class="price">R$00</div>
+          <a href="#" class="btn">Ver mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Espera o DOM carregar
+    window.onload = () => {
+
+      // Menu hamburger
+      const menuBtn = document.getElementById("menuBtn");
+      const menu = document.getElementById("menu");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        menuBtn.classList.toggle("open");
+      });
+
+      // Busca em tempo real
+      const searchInput = document.getElementById("searchInput");
+
+      searchInput.addEventListener("input", () => {
+        const input = searchInput.value.toLowerCase();
+        const cards = document.getElementById("productGrid").getElementsByClassName("card");
+
+        for (let i = 0; i < cards.length; i++) {
+          const cardText = cards[i].innerText.toLowerCase();
+          cards[i].style.display = cardText.includes(input) ? "block" : "none";
+        }
+      });
+
+      // Função para botão de busca
+      window.searchCards = function() {
+        searchInput.dispatchEvent(new Event('input'));
+      }
+    }
+  </script>
+
+  <!-- Widget externo (JivoSite) -->
+  <script src="//code.jivosite.com/widget/WlS5qIa00W" async></script>
+</body>
+</html>
